@@ -1,0 +1,73 @@
+@use "/src/styles/base/breakpoints" as breakpoints;
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/typography" as typography;
+
+.footer {
+  width: 100%;
+  padding: 2rem 0 2rem;
+  background: black;
+  position: relative;
+  // margin: auto 3px;
+
+  &__container {
+    width: 100%;
+    max-width: breakpoints.$screen-max;
+    margin: 0 auto;
+    @include utilities.renian-flexbox-param(flex, auto, space-between);
+    gap: 2rem;
+    
+
+    & > div {
+      width: 100%;
+      max-width: 30rem;
+    }
+  }
+
+  &__description {
+    &Image {
+      margin-left: 115px;
+      // justify-content: center;
+      max-width: 18rem;
+      &:hover {
+        transform: scale(1.1);
+        transition-duration: 1s;
+      }
+    }
+    & > p {
+      margin-top: 1rem;
+      font-family: typography.$typography30;
+      color: colors.$gray50;
+      font-size: 13px;
+      text-align: center;
+    }
+  }
+
+  &__contact {
+    & h3 {
+      font-family: typography.$typography60;
+      color: #dd000090;
+      font-size: 24px;
+    }
+    & > ul {
+      margin-top: 1rem;
+      & > li {
+        // border-bottom: 1px solid colors.$gray10;
+        padding: 0.2rem 0;
+        & div {
+          width: 30px;
+          height: 30px;
+          @include utilities.renian-flexbox-param(flex, center, center);
+        }
+
+        @include utilities.renian-flexbox-param(flex, center, auto);
+        & > p {
+          margin-left: 0.5rem;
+          font-family: typography.$typography30;
+          color: colors.$gray50;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
