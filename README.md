@@ -4,6 +4,17 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 First, run the development server:
 
+1
+npm install
+
+2
+truffle compile
+
+<!-- Encienda GANACHE -->
+<!-- Verificar que estes conectado con el puerto 7545 en GANACHE-->
+3
+truffle migrate
+
 ```bash
 npm run dev
 # or
